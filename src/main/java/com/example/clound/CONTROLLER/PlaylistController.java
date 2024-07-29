@@ -21,16 +21,16 @@ public class PlaylistController {
     @Autowired
     private SongRepository songRepository;
 
-    @PostMapping("/crear")
-    public ResponseEntity<Playlist> createPlaylist(@RequestBody Playlist playlist) {
-        if (playlist.getName() == null) {
-            return ResponseEntity.badRequest().build();
-        }
-        Playlist savedPlaylist = playlistRepository.save(playlist);
-
-        URI location = URI.create("/playlists/" + savedPlaylist.getId());
-        return ResponseEntity.created(location).body(savedPlaylist);
+   @PostMapping("/crear")
+public ResponseEntity<Playlist> createPlaylist(@RequestBody Playlist playlist) {
+    if (playlist.getName() == null) {
+        return ResponseEntity.badRequest().build();
     }
+    Playlist savedPlaylist = playlistRepository.save(playlist);
+    URI location = URI.create("/playlists/" + savedPlaylist.getId());
+    return ResponseEntity.created(location).body(savedPlaylist);
+}
+
 
     @GetMapping("/lists")
     public List<Playlist> getAllPlaylists() {
