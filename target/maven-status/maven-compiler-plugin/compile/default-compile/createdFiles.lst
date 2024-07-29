@@ -1,6 +1,0 @@
-com\example\clound\CloundApplication.class
-com\example\clound\MODELO\Song.class
-com\example\clound\REPOSITORY\SongRepository.class
-com\example\clound\CONTROLLER\PlaylistController.class
-com\example\clound\MODELO\Playlist.class
-com\example\clound\REPOSITORY\PlaylistRepository.class
